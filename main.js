@@ -49,8 +49,11 @@ function calcularTiempoParaSiguienteGrado(){
       seguirCalculando = confirm("¿Deseas calcular el tiempo para el siguiente grado de nuevo?");
       continue;
     }
-
-    alert(`Te faltan ${añosParaSiguienteGrado} años para obtener el grado ${gradoSiguiente}.`);
+    if(añosParaSiguienteGrado >= 0) {
+      alert(`Te faltan ${añosParaSiguienteGrado} años para obtener el grado ${gradoSiguiente}.`);
+    } else {
+      alert(`Ya has superado el tiempo necesario para obtener el grado ${gradoSiguiente}. Habla con tu instructor.`);
+    }
     seguirCalculando = confirm("¿Deseas calcular el tiempo para el siguiente grado de nuevo?");
   }
 }
