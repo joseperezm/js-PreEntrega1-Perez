@@ -14,7 +14,7 @@ function calcularTiempoParaSiguienteGrado(){
         gradoSiguiente = "azul";
       } else {
         alert("Debe haber ingresado un número positivo de años.");
-        seguirCalculando = confirm("¿Deseas calcular el tiempo para el siguiente grado de nuevo?");
+        seguirCalculando = confirm("¿Deseas calcular nuevamente el tiempo para el siguiente grado?");
         continue;
       }
     } else if(gradoActual === "azul"){
@@ -22,8 +22,8 @@ function calcularTiempoParaSiguienteGrado(){
         añosParaSiguienteGrado = 5 - añosEntrenando;
         gradoSiguiente = "purpura";
       } else {
-        alert("No llevas el tiempo suficiente para tener el grado azul...");
-        seguirCalculando = confirm("¿Deseas calcular el tiempo para el siguiente grado de nuevo?");
+        alert("No llevas el tiempo suficiente para ser cinturón azul...");
+        seguirCalculando = confirm("¿Deseas calcular nuevamente el tiempo para el siguiente grado?");
         continue;
       }
     } else if(gradoActual === "purpura"){
@@ -31,8 +31,8 @@ function calcularTiempoParaSiguienteGrado(){
         añosParaSiguienteGrado = 7 - añosEntrenando;
         gradoSiguiente = "cafe";
       } else {
-        alert("No llevas el tiempo suficiente para tener el grado purpura...");
-        seguirCalculando = confirm("¿Deseas calcular el tiempo para el siguiente grado de nuevo?");
+        alert("No llevas el tiempo suficiente para ser cinturón purpura...");
+        seguirCalculando = confirm("¿Deseas calcular nuevamente el tiempo para el siguiente grado?");
         continue;
       }
     } else if(gradoActual === "cafe"){
@@ -40,27 +40,27 @@ function calcularTiempoParaSiguienteGrado(){
         añosParaSiguienteGrado = 10 - añosEntrenando;
         gradoSiguiente = "negro";
       } else {
-        alert("No llevas el tiempo suficiente para tener el grado cafe...");
-        seguirCalculando = confirm("¿Deseas calcular el tiempo para el siguiente grado de nuevo?");
+        alert("No llevas el tiempo suficiente para ser cinturón cafe...");
+        seguirCalculando = confirm("¿Deseas calcular nuevamente el tiempo para el siguiente grado?");
         continue;
       }
     } else if(gradoActual === "negro"){
       alert("¡Felicidades, ya eres cinturón negro!");
-      seguirCalculando = confirm("¿Deseas calcular el tiempo para el siguiente grado de nuevo?");
+      seguirCalculando = confirm("¿Deseas calcular nuevamente el tiempo para el siguiente grado?");
       continue;
     } else {
       alert("El grado ingresado no es válido.");
-      seguirCalculando = confirm("¿Deseas calcular el tiempo para el siguiente grado de nuevo?");
+      seguirCalculando = confirm("¿Deseas calcular nuevamente el tiempo para el siguiente grado?");
       continue;
     }
 
     if(añosParaSiguienteGrado >= 0) {
-      alert(`Te faltan ${añosParaSiguienteGrado} años para obtener el grado ${gradoSiguiente}. ¡Vamos que se puede!`);
+      alert(`Te faltan ${añosParaSiguienteGrado} años para obtener el cinturón ${gradoSiguiente}. ¡Vamos que se puede!`);
     } else {
-      alert(`¡Ya has superado el tiempo necesario para obtener el grado ${gradoSiguiente}! Te recomiendo hables con tu instructor...`);
+      alert(`¡Ya has superado el tiempo necesario para obtener el cinturón ${gradoSiguiente}! Te recomiendo hables con tu instructor...`);
     }
 
-    seguirCalculando = confirm("¿Deseas calcular el tiempo para el siguiente grado de nuevo?");
+    seguirCalculando = confirm("¿Deseas calcular nuevamente el tiempo para el siguiente grado?");
   }
 }
 
