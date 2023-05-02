@@ -2,13 +2,21 @@ function calcularTiempoParaSiguienteGrado(){
   let seguirCalculando = true;
 
   while(seguirCalculando){
-    let gradoActual = prompt("¿Cuál es tu grado actual? (azul, purpura, cafe, negro)");
+    let gradoActual = prompt("¿Cuál es tu grado actual? (blanco, azul, purpura, cafe, negro)");
     let añosEntrenando = parseInt(prompt("¿Cuántos años llevas entrenando?"));
 
     let añosParaSiguienteGrado = 0;
     let gradoSiguiente = "";
 
-    if(gradoActual === "azul"){
+    if(gradoActual === "blanco"){
+      if(añosEntrenando < 1){
+        añosParaSiguienteGrado = 1 - añosEntrenando;
+        gradoSiguiente = "blanco";
+      } else {
+        añosParaSiguienteGrado = 2 - añosEntrenando;
+        gradoSiguiente = "azul";
+      }
+    } else if(gradoActual === "azul"){
       if(añosEntrenando >= 2){
         añosParaSiguienteGrado = 5 - añosEntrenando;
         gradoSiguiente = "purpura";
