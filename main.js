@@ -2,7 +2,7 @@ function calcularTiempoParaSiguienteGrado(){
   let seguirCalculando = true;
 
   while(seguirCalculando){
-    let gradoActual = prompt("¿Cuál es tu grado actual? (blanco, azul, purpura, cafe, negro)");
+    let gradoActual = prompt("¿Cuál es tu grado actual? (blanco, azul, purpura, cafe, negro)").toLowerCase();
     let añosEntrenando = parseInt(prompt("¿Cuántos años llevas entrenando?"));
 
     let añosParaSiguienteGrado = 0;
